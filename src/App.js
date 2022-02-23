@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Redirect, Route, Switch } from "react-router-dom";
+import NetflixNavbar from "./components/navbar";
+import "bootstrap/dist/css/bootstrap.css";
+import Movies from "./components/movies";
+import NewMovie from "./components/newMovie";
+import Movie from "./components/movie";
+import UpdateMovie from "./components/update";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NetflixNavbar></NetflixNavbar>
+      <main>
+        <Switch>
+          <Route path="/movies" component={Movies}></Route>
+          <Route path="/newMovie" component={NewMovie}></Route>
+          <Route path="/movie/:id?" component={Movie}></Route>
+          {/* <Route path="/not-found" component={Movies}></Route> */}
+          <Route path="/update/:id?" component={UpdateMovie}></Route>
+          <Redirect from="/" exact to="/movies"></Redirect>
+        </Switch>
+      </main>
+    </>
   );
 }
 

@@ -1,13 +1,84 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media only screen and (max-width: 590px) {
+  .movieCard img {
+    float: left;
+  }
+
+  .cardTitle {
+    margin-top: 120px;
+  }
+}
+
+.circle {
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.movieCard-grid {
+  cursor: "pointer";
+  border: 1px solid black;
+  width: "260px";
+  display: flex;
+  justify-content: center;
+}
+
+.movieCard-grid a {
+  text-decoration: none;
+}
+
+.movieCard-grid h3 {
+  float: inline-end;
+  color: black;
+  text-decoration: none;
+}
+
+.movieCard-grid img {
+  background-color: red;
+  width: 200px;
+  height: 280px;
+}
+
+.movieCard-list img {
+  float: left;
+}
+
+.movieCard-list {
+  cursor: "pointer";
+  border: 1px solid black;
+  /* width: "260px"; */
+  display: flex;
+  justify-content: left;
+}
+
+.movieCard-list img {
+  width: 150px;
+  height: 200px;
+}
+
+.movieCard-list h3 {
+  padding-left: 2rem;
+  padding-top: 5rem;
+  color: black;
+  float: right;
 }
